@@ -9,7 +9,7 @@ ob_start();
 <?php $customCSS = '<link rel="stylesheet" href="../assets/css/dashboard/history.css">'; ?>
 
 <div class="header-halaman">
-    <h1><i class='bx bx-history'></i> Riwayat Pesanan</h1>
+    <h1>Riwayat Pesanan</h1>
     <p>Pantau semua transaksi masuk, diproses, dan selesai.</p>
 </div>
 
