@@ -1,5 +1,4 @@
 <?php
-// Include logic untuk menyiapkan semua variabel ($roles, $shifts, $q_menu, dll)
 include '../config/logic/manage_logic.php';
 
 $pageTitle = "Manajemen Data";

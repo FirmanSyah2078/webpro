@@ -1,11 +1,9 @@
 <?php
-// Masukkan Logika PHP (Statistik, Pesanan) yang sudah kita bahas sebelumnya
 include '../config/logic/home_logic.php';
 
 $pageTitle = "Home Dashboard";
 $currentPage = "home";
 
-// Ambil Nama Admin (Opsional)
 $adminName = isset($_SESSION['admin_user']) ? ucfirst($_SESSION['admin_user']) : 'Chef';
 
 ob_start();
@@ -31,9 +29,8 @@ ob_start();
         <div id="clock" class="hero-clock">00:00</div>
 
         <?php
-        // Logika Sederhana Status Buka/Tutup
         $jam = (int)date('H');
-        $isOpen = ($jam >= 10 && $jam < 22); // Buka jam 10 - 22
+        $isOpen = ($jam >= 10 && $jam < 22); 
         ?>
 
         <div class="status-pill <?= $isOpen ? 'open' : 'closed'; ?>">
@@ -83,7 +80,6 @@ ob_start();
 
 <?php
 $alert_count = 0;
-// Cek jika ada pesanan pending lebih dari 10 menit
 foreach ($active_orders as $ao) {
     if ($ao['status'] == 'pending' && $ao['durasi'] > 10) $alert_count++;
 }
